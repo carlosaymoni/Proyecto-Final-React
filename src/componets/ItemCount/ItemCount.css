@@ -1,0 +1,12 @@
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.p-count {
+    font-size: 2rem;
+    margin: 10px;
+    color: #f3f4f5;
+}
+

@@ -1,8 +1,8 @@
-import './App.css';
 import './componets/NavBar/NavBar'
 import NavBar from './componets/NavBar/NavBar';
 import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
 import ItemCount from './componets/ItemCount/ItemCount';
+import './App.css'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
       <NavBar />
       </header>
-      <ItemListContainer greeting="Catalogo de productos en proceso de diseño"/>
+      <ItemListContainer />
       <ItemCount/>
     </div>
   );
