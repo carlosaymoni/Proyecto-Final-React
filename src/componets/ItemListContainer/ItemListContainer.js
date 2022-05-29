@@ -15,7 +15,7 @@ const ItemListContainer = (props) => {
 
     return (
         <div>
-            <h2 className="h2">Catalogo de productos</h2>
+            <h2 className="h2">LEGO Star Wars & Marvel</h2>
             <div className="cards">
             <ItemList productos={items}/>
             </div>

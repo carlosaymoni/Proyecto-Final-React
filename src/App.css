@@ -1,12 +1,13 @@
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(255, 207, 0);
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: aliceblue;
+  height: 100px;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #282c34e8;
+  background-color: #000000;
 }

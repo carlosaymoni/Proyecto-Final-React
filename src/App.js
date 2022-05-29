@@ -3,6 +3,8 @@ import NavBar from './componets/NavBar/NavBar';
 import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
 import ItemCount from './componets/ItemCount/ItemCount';
 import './App.css'
+import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer';
+
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
       <NavBar />
       </header>
       <ItemListContainer />
+      <ItemDetailContainer/>
       <ItemCount/>
     </div>
   );

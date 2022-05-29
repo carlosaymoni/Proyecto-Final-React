@@ -1,3 +1,4 @@
+
 function CustomFetch(time, tarea) {
     return new Promise((resolve) => {
             setTimeout(() => {
