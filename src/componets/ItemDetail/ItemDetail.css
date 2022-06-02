@@ -1,6 +1,7 @@
 .card-detail {
     margin: 10px;
-    height: 280px;
+    width: 900px;
+    height: 600px;
     background-color: rgb(26, 25, 31);
     border-radius: 8px;
     overflow: hidden;
@@ -8,39 +9,35 @@
     display: flex;
 }
 
-@media screen and (max-width:1460px){
-    .card-detail{
-        flex-direction: column;
-        width: 280px;
-        height: 580px;
-    }
-}
-
-.card-body-detail {
-    text-align: center;
+.card-img-detail {
+    width: 100%;
 }
 
 .img-detail {
-    width: 280px;
-    height: 100%;
-    object-fit: cover;
-    
+    width: 300px;
+    height: 300px;
+}
+
+.card-body-detail {
+    width: 100%;
 }
 
 .card-title-detail {
-    margin: 20px 0;
+    text-align: center;
     color: aliceblue;
-    text-transform: uppercase;
-    font-weight: 300; 
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 300;
 }
 
-.detail {
-    color: aliceblue;
-    margin: 3px;
-    font-size: 15px;
+.detail-text {
+    color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px;
 }
 
-.card-text-detail {
-    margin: 20px 0;
-    color: rgb(255, 0, 0);
+.detail-precio {
+    font-size: 26px;
+    color: rgba(255, 0, 0, 0.678);
+    text-align: center;
 }

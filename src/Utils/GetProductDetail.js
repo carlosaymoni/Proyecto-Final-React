@@ -4,7 +4,7 @@ const getProductDetail = (id) => {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(productos.find(pdetail => pdetail.id === id))
-        }, 4000)
+        }, 2000)
     })
 }
 

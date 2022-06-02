@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Item.css'
 
 
 
-function Item ({img,id,precio,nombre,category}) {
+function Item ({img,id,nombre,category}) {
   return (
     <div className="card" key={ id }>
       <div className="card-img">
@@ -11,8 +12,8 @@ function Item ({img,id,precio,nombre,category}) {
       </div>
       <div className="card-body">
         <h4 className="card-title">{ nombre }</h4>
-        <span className="card-span">{ category }</span>
-        <p className="card-text">$ { precio }</p>
+        <p className="card-span">{ category }</p>
+        <Link to={`/detail/${id}`}>Ver Mas...</Link>
       </div>
     </div>
   )

@@ -9,8 +9,8 @@ function ItemDetail ({img,id,precio,nombre,detail}) {
         </div>
         <div className="card-body-detail">
           <h3 className="card-title-detail">{ nombre }</h3>
-          <p className="detail">{ detail }</p>
-          <p className="card-text-detail">$ { precio }</p>
+          <p className="detail-text">{ detail }</p>
+          <p className="detail-precio">$ { precio }</p>
         </div>
       </div>
     )

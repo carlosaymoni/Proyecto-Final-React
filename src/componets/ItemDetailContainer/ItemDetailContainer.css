@@ -1,14 +1,7 @@
 .cards-detail {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    width: 40%;
     margin: 0 auto;
-}
-
-.h2 {
-    text-align: center;
-    font-size: 2em;
-    color: aliceblue;
-    font-weight: 300;
+    max-width: 1000px;
+    max-height: 900px;
 }
