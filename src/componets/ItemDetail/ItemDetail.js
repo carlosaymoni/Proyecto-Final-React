@@ -1,7 +1,8 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
-function ItemDetail ({img,id,precio,nombre,detail}) {
+function ItemDetail ({img,id,precio,nombre,detail,stock}) {
     return (
       <div className="card-detail" key={ id }>
         <div className="card-img-detail">
@@ -11,6 +12,7 @@ function ItemDetail ({img,id,precio,nombre,detail}) {
           <h3 className="card-title-detail">{ nombre }</h3>
           <p className="detail-text">{ detail }</p>
           <p className="detail-precio">$ { precio }</p>
+          < ItemCount stock={stock} />
         </div>
       </div>
     )

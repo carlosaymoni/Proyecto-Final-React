@@ -6,7 +6,7 @@ import './Item.css'
 
 function Item ({img,id,nombre,category}) {
   return (
-    <div className="card" key={ id }>
+    <div className="card" key={id}>
       <div className="card-img">
         <img src={ img } alt="imagen del producto"/>
       </div>
@@ -20,3 +20,4 @@ function Item ({img,id,nombre,category}) {
 }
 
 export default Item
+

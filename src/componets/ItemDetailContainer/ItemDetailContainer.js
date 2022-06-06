@@ -7,14 +7,16 @@ import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
     const [producto, setItems] = useState()
+    
+       
     const { productoId } = useParams()
-     console.log(productoId); 
     
      useEffect(() => {
         getProductDetail(productoId).then(resultado => {
             setItems(resultado)
-        })  
+        })
     }, [productoId])
+
         
     return (
         <div>

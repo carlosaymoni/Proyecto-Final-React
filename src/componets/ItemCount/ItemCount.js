@@ -1,12 +1,14 @@
 import { useState } from "react";
-import Button  from "../Button/Button";
-import './ItemCount.css'
+import { Link } from "react-router-dom";
 
-const ItemCount = () => {
+import './ItemCount.css';
+
+
+const ItemCount = ({stock}) => {
     const [count, setCount] = useState(0)
 
     const increment = () => {
-        if (count < 10) {
+        if (count < stock) {
             setCount(count + 1)
         }
     }
@@ -16,11 +18,23 @@ const ItemCount = () => {
             setCount(count - 1)
         }
     }
+
+    function onAdd () {
+        if (count > 0) {
+            alert('Agregaste ' + count + ' productos al carrito');
+        }
+    }
+
     return ( 
         <div className="contador">
-        <Button handleClick = { decrement } label='-' color='red' width='50px' height='50px' borderRadius='50%' border='none' fontSize='2em' />
-        <p className="p-count"> {count} </p> 
-        <Button handleClick = { increment } label='+' color='green' width='50px' height='50px' borderRadius='50%' border='none' fontSize='2em'/>
+            <div className="botones">
+                <button onClick = { decrement }> - </button>
+                    <p className="p-count"> {count} </p> 
+                <button onClick = { increment }> + </button>
+            </div>
+            <button className="btn-count" onClick={ onAdd }>Agregar al Carrito</button>
+            { count > 0 ? <Link to='/Cart' className="btn-to-cart">Finalizar Compra</Link> : <p className="p-stock">Stock: { stock }</p>}
+            
         </div>
     )
 
