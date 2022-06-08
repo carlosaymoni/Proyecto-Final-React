@@ -4,7 +4,7 @@ import './Item.css'
 
 
 
-function Item ({img,id,nombre,category}) {
+function Item ({ id, img, nombre, category }) {
   return (
     <div className="card" key={id}>
       <div className="card-img">
