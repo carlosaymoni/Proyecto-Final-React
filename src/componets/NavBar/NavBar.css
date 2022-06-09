@@ -22,8 +22,9 @@
 }
 
 .btn-nav:hover {
-    background-color: rgb(206, 30, 30);
-    border: 2px solid rgb(206, 30, 30); 
+    background-color: rgba(206, 30, 30, 0);
+    border: 2px solid red;
+    color: red; 
 }
 
 .logo {
@@ -33,4 +34,12 @@
     margin: 3px;
     border-radius: 8px;
     text-decoration: none;
+}
+
+.cart-hidden {
+    opacity: 0;
+}
+
+.cart-block {
+    opacity: 1;
 }
