@@ -1,9 +1,10 @@
+.detail {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
 .card-detail {
-    margin: 10px;
-    width: 900px;
-    height: 600px;
     background-color: rgb(26, 25, 31);
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 1px 1px 25px 4px rgba(255, 254, 254, 0.473);
     display: flex;
@@ -14,12 +15,14 @@
 }
 
 .img-detail {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-body-detail {
     width: 100%;
+    align-self: center;
 }
 
 .card-title-detail {
@@ -41,3 +44,4 @@
     color: rgba(255, 0, 0, 0.678);
     text-align: center;
 }
+

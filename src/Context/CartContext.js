@@ -27,28 +27,28 @@ export const CartContextProvider = ({ children }) => {
     
     const getCantidad = () => {
         let accu = 0
-        cart.forEach(prod => {
-          accu += prod.cantidad
+        cart.forEach(lego => {
+          accu += lego.cantidad
         })
-    
         return accu
     }
 
-    const isInCart = (id) => {
-        return cart.some(prod => prod.id === id)
+    const totalAPagar = () => {
+        let total = 0
+        cart.forEach(lego => {
+            total += lego.cantidad * lego.precio
+        })
+         return total
     }
 
-    const getProduct = (id) => {
-        return cart.find(prod => prod.id === id)
-    }
+    const isInCart = id => cart.some(lego => lego.id === id)
+    
+    const quitarLego = (id) => setCart(cart.filter(item => item.id !== id));
 
-    const removeItem = (id) => {
-        const newCart = cart.filter(prod => prod.id !== id)
-        setCart(newCart)
-    }
+    const clearCart = () => setCart([]);
 
     return(
-        <CartContext.Provider value={{ cart, addToCart, getCantidad, getProduct, removeItem }}>
+        <CartContext.Provider value={{ cart, addToCart, getCantidad, quitarLego, totalAPagar, clearCart }}>
             {children}
         </CartContext.Provider>
     )

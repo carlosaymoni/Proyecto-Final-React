@@ -34,7 +34,7 @@
 
 .btn-to-cart {
     text-decoration: none;
-    margin: 0px auto;
+    margin: 25px auto;
     padding: 4px;
     background-color: rgb(255, 0, 0);
     color: #f3f4f5;
@@ -43,7 +43,7 @@
     font-size: 15px;
     display:block; 
     text-align: center;
-    width: 40%;
+    width: 90px;
 }
 
 .btn-to-cart:hover {
