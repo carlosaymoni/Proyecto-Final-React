@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
+    height: auto;
 }
 
 .h2 {
@@ -12,3 +13,12 @@
     color: aliceblue;
     font-weight: 300;
 }
+
+.loading {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+

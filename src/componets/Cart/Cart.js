@@ -2,10 +2,32 @@ import React, { useContext } from 'react'
 import CartContext from '../../Context/CartContext'
 import './Cart.css'
 import { Link } from 'react-router-dom'
+import { db } from '../../services/firebase'
+import { addDoc, collection } from 'firebase/firestore'
+
+
 
 function Cart() {
   const {cart, quitarLego, clearCart,totalAPagar} = useContext(CartContext)
   
+   const newOrder = () => {  
+     const order = {
+         buyer: {
+          nombre: 'Carlos',
+          email: 'Carlos@email.com',
+          telefono: '123456', 
+        },
+          productos: cart,
+          total: totalAPagar()
+      }
+       const collectionRef = collection(db,'Ordenes')
+       addDoc(collectionRef, order).then (({id}) => {
+       console.log(`Orden creada con el id: ${id}`);
+       console.log(order);
+    })
+
+  }
+
   if(cart.length === 0){
     return(
       <div className="cart-vacio">
@@ -17,9 +39,10 @@ function Cart() {
     return (
         <div>
           <section className='cart-lego'>
-            <h2 className='cart-title'>Tu Carrito</h2>
-              <button onClick={ clearCart } className='btn-quitar-lego'>Limpiar Carrito</button>
-              <h5 className='total'>Total: ${totalAPagar()}</h5>
+            <div className='head-cart'>
+              <h2 className='cart-title'>Tu Carrito</h2>
+              <p className='total'>Total: ${totalAPagar()}</p>
+            </div>
               { cart.map(lego => {
                 return(
                   <div key={lego.id} className='cart-info' >
@@ -33,6 +56,10 @@ function Cart() {
                   </div>
                 )
               })}
+              <div className='btn-end-cart'>
+                <button onClick={ clearCart } className='clear-cart'>Limpiar Carrito</button>
+                <button onClick={ newOrder } className='btn-new-order'>Generar Orden</button> 
+              </div>
           </section>
         </div>
       )

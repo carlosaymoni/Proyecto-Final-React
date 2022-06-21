@@ -1,11 +1,18 @@
 
 .svg-inline--fa {
-    color: red;
-    margin-right: 8px; 
+    color: red; 
 }
 
 .div-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito {
     border: 3px solid red;
     padding: 5px;
     border-radius: 8px;
+    margin: 10px;
 }
+

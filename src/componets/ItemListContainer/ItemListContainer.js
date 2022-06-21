@@ -6,15 +6,18 @@ import { db } from "../../services/firebase";
 //import { getProductsByCategory } from "../../Utils/GetProductByCategory";
 //import productos from "../../Utils/Productos";
 import ItemList from "../ItemList/ItemList";
-import './ItemListContainer.css'
+import './ItemListContainer.css';
+import RingLoader from "react-spinners/RingLoader";
 
 
 const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
-    const {categoryId} = useParams()
+    const {categoryId} = useParams();
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        
+        setLoading(true)
+
         const collectionRef = categoryId
             ? query(collection(db, 'productos'),where('categoria', '==', categoryId))
             : collection(db, 'productos')
@@ -24,6 +27,8 @@ const ItemListContainer = (props) => {
                 return { id: doc.id, ...doc.data() }
             })
             setItems(producs)
+        }).finally(() => {
+            setLoading(false)
         })
 
         // if (!categoryId){
@@ -35,6 +40,13 @@ const ItemListContainer = (props) => {
         //     })
         // }
     },[categoryId]);
+
+    if(loading) {
+        return ( 
+            <div className="loading">
+                <RingLoader color={ '#ffcf00' } loading={ loading } size={ 80 } />
+            </div>
+    )}
 
     return (
         <div>

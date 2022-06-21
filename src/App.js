@@ -6,7 +6,9 @@ import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailConta
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './componets/Cart/Cart';
 import { CartContextProvider } from './Context/CartContext';
-import Footer from './componets/Footer/Footer';
+import Login from './componets/Login/Login';
+
+
 
 
 function App() {
@@ -22,8 +24,8 @@ function App() {
          <Route path='/detail/:productoId' element={ <ItemDetailContainer/> }/>
          <Route path='/category/:categoryId' element={ <ItemListContainer/> }/>
          <Route path='/cart' element={ <Cart/> }/>
-        </Routes>  
-        < Footer />
+         <Route path='/login' element={ <Login/> }/>
+        </Routes>     
       </BrowserRouter>
       </CartContextProvider>
     </div>

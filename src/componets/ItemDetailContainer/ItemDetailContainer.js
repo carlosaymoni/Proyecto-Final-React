@@ -4,17 +4,22 @@ import { useParams } from "react-router-dom";
 import { db } from "../../services/firebase";
 //import getProductDetail  from "../../Utils/GetProductDetail";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import './ItemDetailContainer.css'
+import './ItemDetailContainer.css';
+import RingLoader from "react-spinners/RingLoader";
 
 
 const ItemDetailContainer = () => {
     const [producto, setItems] = useState()     
     const { productoId } = useParams()
-
+    const [loading, setLoading] = useState(true)
+   
      useEffect(() => {
+        setLoading(true)
         getDoc(doc(db, 'productos', productoId)).then(response => {
             const product = { id: response.id, ...response.data() }
             setItems(product)
+        }).finally(() => {
+            setLoading(false)
         })
 
         //getProductDetail(productoId).then(resultado => {
@@ -23,6 +28,12 @@ const ItemDetailContainer = () => {
         //})
     }, [productoId])
 
+    if(loading) {
+        return ( 
+            <div className="loading">
+                <RingLoader color={ '#ffcf00' } loading={ loading } size={ 80 } />
+            </div>
+    )}
         
     return (
         <div>

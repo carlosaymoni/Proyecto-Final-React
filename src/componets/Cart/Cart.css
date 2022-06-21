@@ -1,24 +1,45 @@
+.head-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .cart-title {
     color: aliceblue;
     font-weight: 400;
     text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0px;
+}
+
+.total {
+    color: aliceblue;
+    font-size: 1em;
+    letter-spacing: 2px;
+    padding: 3px 7px;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    font-weight: 100;
 }
 
 .cart-lego{
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    height: 79vh;
+    height: 82vh;
 }
 
 .cart-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 30px 10px 0 10px;
     align-items: center;
     border-bottom: 1px solid white ;
 }
 
 .cart-info p {
     color: aliceblue;
+    padding: 5px 25px;
 }
 
 .btn-quitar-lego{
@@ -28,11 +49,23 @@
     border: 2px solid rgb(255, 0, 0);
     transition: all .2s ease-in-out;
     font-size: 15px; 
-    align-items: flex-end;
 }
 
-.btn-quitar-lego:hover {
+.btn-quitar-lego:hover,
+.clear-cart:hover,
+.btn-new-order:hover {
     background-color: rgba(255, 0, 0, 0);
+}
+
+.clear-cart {
+    padding: 4px;
+    background-color: rgb(255, 0, 0);
+    color: #f3f4f5;
+    border: 2px solid rgb(255, 0, 0);
+    transition: all .2s ease-in-out;
+    font-size: 15px;
+    margin: 25px;
+    
 }
 
 .cart-vacio {
@@ -57,6 +90,18 @@
     color: rgba(255, 0, 0, 0.521);
 }
 
-.total {
-    color: aliceblue;
+.btn-end-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-new-order {
+    padding: 4px;
+    background-color: green;
+    color: #f3f4f5;
+    border: 2px solid rgb(0, 128, 0);
+    transition: all .2s ease-in-out;
+    font-size: 15px;
+    margin: 25px;
 }
