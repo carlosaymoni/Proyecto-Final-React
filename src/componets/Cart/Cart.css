@@ -54,7 +54,7 @@
 .btn-quitar-lego:hover,
 .clear-cart:hover,
 .btn-new-order:hover {
-    background-color: rgba(255, 0, 0, 0);
+    background-color: transparent;
 }
 
 .clear-cart {
@@ -104,4 +104,21 @@
     transition: all .2s ease-in-out;
     font-size: 15px;
     margin: 25px;
+}
+
+.link-to-login {
+    text-decoration: none;
+    font-size: 15px;
+    margin: 25px;
+    padding: 4px;
+    background-color: red;
+    color: #f3f4f5;
+    border: 2px solid red;
+    transition: all .2s ease-in-out;
+    width: 70px;
+    text-align: center;
+}
+
+.link-to-login:hover {
+    background-color: transparent;
 }

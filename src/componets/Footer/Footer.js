@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
         <div className='footer'>
-            <p>E-commerce LEGO creado por Carlos Aymoni | Proyecto Final Reactjs </p>
+            <p>E-commerce <b>LEGO</b> creado por Carlos Aymoni | Proyecto Final Reactjs </p>
         </div>
     </footer>
   )

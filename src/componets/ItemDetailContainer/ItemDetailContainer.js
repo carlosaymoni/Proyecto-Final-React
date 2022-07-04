@@ -9,7 +9,7 @@ import RingLoader from "react-spinners/RingLoader";
 
 
 const ItemDetailContainer = () => {
-    const [producto, setItems] = useState()     
+    const [producto, setProducto] = useState()     
     const { productoId } = useParams()
     const [loading, setLoading] = useState(true)
    
@@ -17,15 +17,10 @@ const ItemDetailContainer = () => {
         setLoading(true)
         getDoc(doc(db, 'productos', productoId)).then(response => {
             const product = { id: response.id, ...response.data() }
-            setItems(product)
+            setProducto(product)
         }).finally(() => {
             setLoading(false)
         })
-
-        //getProductDetail(productoId).then(resultado => {
-        //    setItems(resultado)
-        
-        //})
     }, [productoId])
 
     if(loading) {

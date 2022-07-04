@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { useContext, useState } from 'react';
 import {Link} from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 function ItemDetail ({img,id,precio,nombre,detail,stock}) {
     const {addToCart,} = useContext(CartContext);
@@ -11,6 +12,21 @@ function ItemDetail ({img,id,precio,nombre,detail,stock}) {
     const handleOnAdd = (cantidad) => {
       setCantidad(cantidad)
       addToCart({ id, img, nombre, precio, cantidad })
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      Toast.fire({
+        icon: 'success',
+        title: 'Agregando al carrito'
+      })
   }
 
     return (
@@ -24,7 +40,7 @@ function ItemDetail ({img,id,precio,nombre,detail,stock}) {
             <p className="detail-text">{ detail }</p>
             <p className="detail-precio">$ { precio }</p>
             { cantidad > 0 
-                ? <Link to='/cart' className='btn-to-cart'>Ir al Carrito</Link>
+                ? <Link to='/Cart' className='btn-to-cart'>Ver Carrito</Link>
                 : <ItemCount stock={stock} inicial={1} agregar={ handleOnAdd }/> }
           </div>
         </div>

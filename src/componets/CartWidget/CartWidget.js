@@ -15,7 +15,9 @@ const CartWidget = () => {
                 <Link to='/cart' className='link-icon-cart'>
                     <FontAwesomeIcon icon={faCartShopping}  className= 'icon-carrito'/>
                 </Link>
+                <span className='span-cantidad'>
                 { cantidad }
+                </span>    
             </div>
             <div className='carrito'>
                 <Link to='/login' className='link-icon-cart'>

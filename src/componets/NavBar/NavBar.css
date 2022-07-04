@@ -22,7 +22,7 @@
 }
 
 .btn-nav:hover {
-    background-color: rgba(206, 30, 30, 0);
+    background-color: transparent;
     border: 2px solid red;
     color: red; 
 }

@@ -4,13 +4,16 @@
     align-items: center;
     flex-direction: column;
 }
-  
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
 .p-count {
-    font-size: 1.2rem;
-    margin: 10px;
-    padding: 10px;
-    color: #f3f4f5;
-    display: inline;
+    color: aliceblue;
+    margin: 10px 20px;
 }
 
 .btn-count {
@@ -26,12 +29,6 @@
     background-color: rgba(255, 0, 0, 0);
 }
 
-.p-stock {
-    color: aliceblue;
-    line-height: 20px;
-    letter-spacing: 2px;
-}
-
 .btn-to-cart {
     text-decoration: none;
     margin: 25px auto;
@@ -41,11 +38,16 @@
     border: 2px solid rgb(255, 0, 0);
     transition: all .2s ease-in-out;
     font-size: 15px;
-    display:block; 
+    display: block; 
     text-align: center;
-    width: 90px;
+    width: max-content;
 }
 
 .btn-to-cart:hover {
     background-color: rgba(255, 0, 0, 0);
+}
+
+.error-stock {
+    color: red;
+    margin-bottom: 10px;
 }
