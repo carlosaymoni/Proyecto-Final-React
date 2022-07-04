@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #ffcf00;
+    color: aliceblue;
     height: 100px;
 }
 
@@ -34,6 +36,7 @@
     margin: 3px;
     border-radius: 8px;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 .cart-hidden {
@@ -43,3 +46,4 @@
 .cart-block {
     opacity: 1;
 }
+

@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
  
 const firebaseConfig = {
-  apiKey: "AIzaSyCqWjxc5blUzJOSvyqFkQMsQwIux4mRaDQ",
-  authDomain: "ecommerce-lego.firebaseapp.com",
-  projectId: "ecommerce-lego",
-  storageBucket: "ecommerce-lego.appspot.com",
-  messagingSenderId: "736976945941",
-  appId: "1:736976945941:web:5e8a16f2ba7b7f962b9f1c"
+  apiKey: process.env.REACT_APP_apikey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 
