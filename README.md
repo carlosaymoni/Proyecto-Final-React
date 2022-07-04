@@ -24,4 +24,6 @@ Clonar el repositorio, instalar la aplicacion mediante "npm install react-app" e
 - Estando en el carrito se muestra la cantidad, nombre del lego, precio unitário, subtotal y el total general de la compra la cuál se puede finalizar sin el usuário completa el Login.
 - Por último una vez generada la orden se muestra en pantalla un mensaje para el usuário con el ID de la orden.
 
-<video src='../public/video/Demo.mp4'/>
+## Demo
+
+https://user-images.githubusercontent.com/81722127/177207659-7710564b-7524-4214-87ae-fdf245969090.mp4
